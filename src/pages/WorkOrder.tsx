@@ -199,7 +199,7 @@ const WorkOrder = () => {
                 </tr>
               </thead>
               <tbody>
-                {tasks.filter(task => selectedServices.has(task.id)).map((task, index) => {
+                {tasks.map((task, index) => {
                   const isSelected = selectedServices.has(task.id);
                   const service = selectedServices.get(task.id);
                   const { totalPrice, totalDuration } = getServiceCalculations(task.id);
