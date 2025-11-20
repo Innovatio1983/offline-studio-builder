@@ -172,7 +172,7 @@ const WorkOrder = () => {
                   <th className="px-2 py-2 text-left text-xs font-semibold text-secondary-foreground">Task</th>
                   <th className="px-2 py-2 text-left text-xs font-semibold text-secondary-foreground">Price ($)</th>
                   <th className="px-2 py-2 text-left text-xs font-semibold text-secondary-foreground">Duration</th>
-                  <th className="px-2 py-2 text-left text-xs font-semibold text-secondary-foreground">Area (m²)</th>
+                  <th className="px-2 py-2 text-left text-xs font-semibold text-secondary-foreground">Area (sq ft)</th>
                   <th className="px-2 py-2 text-left text-xs font-semibold text-secondary-foreground">Qty</th>
                   <th className="px-2 py-2 text-left text-xs font-semibold text-secondary-foreground">Total Price</th>
                   <th className="px-2 py-2 text-left text-xs font-semibold text-secondary-foreground">Total Duration</th>
@@ -194,8 +194,8 @@ const WorkOrder = () => {
                       </td>
                       <td className="px-2 py-2 text-muted-foreground">{index + 1}</td>
                       <td className="px-2 py-2 font-medium">{task.name}</td>
-                      <td className="px-2 py-2">${task.pricePerSqm.toFixed(2)}/m²</td>
-                      <td className="px-2 py-2">{task.durationPerSqm} min/m²</td>
+                      <td className="px-2 py-2">${task.pricePerSqm.toFixed(2)}/sq ft</td>
+                      <td className="px-2 py-2">{task.durationPerSqm} min/sq ft</td>
                       <td className="px-2 py-2">
                         <Input
                           type="number"
