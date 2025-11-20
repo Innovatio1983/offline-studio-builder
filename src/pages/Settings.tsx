@@ -69,8 +69,8 @@ const Settings = () => {
               <thead>
                 <tr className="bg-secondary">
                   <th className="px-4 py-3 text-left text-sm font-semibold text-secondary-foreground">Task</th>
-                  <th className="px-4 py-3 text-left text-sm font-semibold text-secondary-foreground">Price ($/m²)</th>
-                  <th className="px-4 py-3 text-left text-sm font-semibold text-secondary-foreground">Duration (min/m²)</th>
+                  <th className="px-4 py-3 text-left text-sm font-semibold text-secondary-foreground">Price ($/sq ft)</th>
+                  <th className="px-4 py-3 text-left text-sm font-semibold text-secondary-foreground">Duration (min/sq ft)</th>
                 </tr>
               </thead>
               <tbody>
