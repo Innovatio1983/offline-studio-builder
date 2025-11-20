@@ -93,10 +93,18 @@ const WorkOrder = () => {
     window.print();
   };
 
+  const formatDuration = (minutes: number) => {
+    const hours = Math.floor(minutes / 60);
+    const mins = Math.round(minutes % 60);
+    if (hours === 0) return `${mins} minutes`;
+    if (mins === 0) return `${hours} hour${hours !== 1 ? 's' : ''}`;
+    return `${hours} hour${hours !== 1 ? 's' : ''} ${mins} minute${mins !== 1 ? 's' : ''}`;
+  };
+
   const handleGenerateTotal = () => {
     toast({
       title: "Total Generated",
-      description: `Total Cost: $${totalCost.toFixed(2)} | Duration: ${totalDuration} minutes`,
+      description: `Total Cost: $${totalCost.toFixed(2)} | Duration: ${formatDuration(totalDuration)}`,
     });
   };
 
@@ -236,7 +244,7 @@ const WorkOrder = () => {
                 <h3 className="text-2xl font-bold text-foreground">Total Cost: ${totalCost.toFixed(2)}</h3>
               </div>
               <div className="text-center sm:text-right">
-                <h3 className="text-2xl font-bold text-foreground">Total Duration: {totalDuration.toFixed(0)} minutes</h3>
+                <h3 className="text-2xl font-bold text-foreground">Total Duration: {formatDuration(totalDuration)}</h3>
               </div>
             </div>
           </div>
